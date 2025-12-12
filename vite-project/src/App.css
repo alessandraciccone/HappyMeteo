@@ -1,0 +1,14 @@
+body{
+    font-family:"Poppins", sans-serif;
+    color:#004d61;
+    margin:0;
+    background-color: #d3f3f7 !important;
+}
+
+
+.container{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    padding-top:40px
+}

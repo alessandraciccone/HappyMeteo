@@ -1,0 +1,119 @@
+.cardHome{
+    width:500px !important;
+    height:300px !important;
+    background-color: #f6ffce !important;
+    border:2px solid #a7d8de;
+    box-shadow: 0 6px 15px rgba(0, 150, 200, 0.3);
+    border-radius:16px;
+    display:flex;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position:relative;
+    overflow:hidden;
+}
+
+.cardBody{
+   
+    gap:1rem;
+}
+
+.form-control{
+    width:100%;
+    margin-top:30px
+}
+
+
+.card-subtitle, .card-text{
+    width:100%; text-align:center;
+    margin-top:1px
+    
+
+}
+
+.cardHome:hover{
+    transform:translateY(-5px);
+    box-shadow: 0 10px 20px rgba( 0, 250, 200, 0.3);
+}
+
+
+.cardHome .card-subtitle{
+    color: #131414;
+    text-align:center;
+    
+}
+
+.cardHome .form-control:focus{
+    margin-top: 15px;
+    border-color:#4dd0e1;
+    display:flex;
+    box-shadow: 0 0 8px rgba(77, 200, 225, 0.5);
+}
+
+
+.cardHome .btnC{
+    background-color: #4dd0e1;
+    border:none;
+    border-radius:10px;
+    font-weight:600;
+margin-top:20px
+}
+
+
+.btC:hover{
+    background-color: #00acc1
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px !important;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-style: italic;
+  letter-spacing: 3px;
+  color: #0047ff;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 
+      0 0 8px #006eff,
+      0 0 15px #3393ff,
+      0 0 25px #66b0ff;
+  }
+  to {
+    text-shadow: 
+      0 0 12px #3393ff,
+      0 0 25px #66b0ff,
+      0 0 45px #99caff;
+  }
+}
+
+.emoji-strip {
+  display: inline-flex;
+  gap: 1.5rem;
+  font-size: 2rem;
+  white-space: nowrap;
+  animation: scrollEmoji 15s linear infinite;
+  margin-bottom: 15px;
+white-space: nowrap;}
+
+.icon {
+  width: 32px;
+  height: 32px;
+}
+
+@keyframes scrollEmoji {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.sfondi{
+  text-align:center !important
+}
+.sImg{
+  width:400px;
+text-align:center !important}
