@@ -1,10 +1,12 @@
-body{
-    font-family:"Poppins", sans-serif;
-    color:#004d61;
-    margin:0;
-    background-color: #d3f3f7 !important;
+body {
+  font-family: "Poppins", sans-serif;
+  color: #004d61;
+  margin: 0;
+  background-image: url("/src/assets/img/bodysfondo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
 
 .container{
     display:flex;

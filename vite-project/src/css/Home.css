@@ -62,31 +62,33 @@ margin-top:20px
 .btC:hover{
     background-color: #00acc1
 }
-
 h1 {
   text-align: center;
   margin-top: 20px !important;
   font-family: "Georgia", "Times New Roman", serif;
   font-style: italic;
   letter-spacing: 3px;
-  color: #0047ff;
-  animation: glow 2s ease-in-out infinite alternate;
+  color: #8a2be2;
+  font-size: 3.5rem !important;
+
+  animation: glow 2.2s ease-in-out infinite alternate;
 }
 
 @keyframes glow {
   from {
     text-shadow: 
-      0 0 8px #006eff,
-      0 0 15px #3393ff,
-      0 0 25px #66b0ff;
+      0 0 8px #b066ff,   
+      0 0 18px #c48cff,  
+      0 0 30px #d6a6ff;  
   }
   to {
     text-shadow: 
-      0 0 12px #3393ff,
-      0 0 25px #66b0ff,
-      0 0 45px #99caff;
+      0 0 12px #c48cff, 
+      0 0 28px #d6a6ff,
+      0 0 50px #e8c2ff; 
   }
 }
+
 
 .emoji-strip {
   display: inline-flex;
@@ -117,3 +119,20 @@ white-space: nowrap;}
 .sImg{
   width:400px;
 text-align:center !important}
+
+
+.cardHome {
+  position: relative;
+  overflow: hidden;
+}
+
+.cardHome {
+  backdrop-filter: blur(2px);
+  background-color: #f6ffce !important;
+}
+
+.sImg {
+  filter: blur(1.5px);
+  opacity: 0.9;
+}
+
