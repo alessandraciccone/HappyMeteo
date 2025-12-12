@@ -3,6 +3,12 @@ import { useParams, useNavigate } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import "../css/CityDetails.css";
+import SunIcon from "./SunIcon";
+import RainIcon from "./RainIcon";
+import Snow from "./Snow";
+import Rainbow from "./Rainbow";
+import img from "../assets/img/img.png";
 
 const CityDetails = () => {
   const { cityName } = useParams();
@@ -57,38 +63,51 @@ const CityDetails = () => {
   }, [cityName]);
 
   return (
-    <div className="container">
-      <Card className="shadow">
-        <Card.Body>
-          <Form className="formCd">
-            <Form.Control
-              type="text"
-              value={cityInput}
-              onChange={(e) => setCityInput(e.target.value)}
-              placeholder="Inserisci la tua città"
-              className="formC2"
-            />
+    <div>
+      {" "}
+      <h1>Happy Meteo!</h1>
+      <div className="container">
+        <Card className="shadow cardCd">
+          <Card.Body className="cbody">
+            <div className="emoji-strip">
+              <SunIcon />
+              <RainIcon />
+              <Snow />
+              <Rainbow />
+            </div>
+            <Form className="formCd">
+              <Form.Control
+                type="text"
+                value={cityInput}
+                onChange={(e) => setCityInput(e.target.value)}
+                placeholder="Inserisci la tua città"
+                className="formC2"
+              />
 
-            <Button className="btnCd" onClick={handleSearch}>
-              Vai!
-            </Button>
-          </Form>
-          <Card.Title className="titleC"> Meteo per {cityName}</Card.Title>
-          {weather ? (
-            <>
-              <Card.Text className="txc">
-                Temperatura:{weather.temp}°C
+              <Button className="btnCd" onClick={handleSearch}>
+                Vai!
+              </Button>
+            </Form>
+            <Card.Title className="titleC"> Meteo per: {cityName}</Card.Title>
+            {weather ? (
+              <>
+                <Card.Text className="txc">
+                  Temperatura:{weather.temp}°C
+                </Card.Text>
+                <Card.Text className="tcc"> {message}</Card.Text>
+              </>
+            ) : (
+              <Card.Text className="cs">
+                {" "}
+                {message || "Caricamento meteo"}
               </Card.Text>
-              <Card.Text className="tcc"> {message}</Card.Text>
-            </>
-          ) : (
-            <Card.Text className="cs">
-              {" "}
-              {message || "Caricamento meteo"}
-            </Card.Text>
-          )}
-        </Card.Body>
-      </Card>
+            )}
+          </Card.Body>
+        </Card>
+      </div>
+      <div className="imm">
+        <img src={img} alt="sfondo" className="sImg"></img>
+      </div>
     </div>
   );
 };

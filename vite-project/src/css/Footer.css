@@ -1,0 +1,29 @@
+.weather-footer {
+  background-color: #0f0f0f;
+  color: #004d61;
+  text-align: center;
+  font-weight: bold;
+  padding: 20px;
+  font-size: 0.9rem;
+  border-top: 2px dashed #81d4fa;
+}
+
+.footer-top {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.footer-middle a {
+  color: #00796b;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer-middle a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  margin-top: 10px;
+  font-style: italic;
+}
