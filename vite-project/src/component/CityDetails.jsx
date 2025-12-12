@@ -9,6 +9,11 @@ import RainIcon from "./RainIcon";
 import Snow from "./Snow";
 import Rainbow from "./Rainbow";
 import img from "../assets/img/img.png";
+import SunEmoji from "./SunEmoji";
+import SweatEmoji from "./SweatEmoji";
+import UmbrellaEmoji from "./UmbrellaEmoji";
+import ScarfEmoji from "./ScarfEmoji";
+import SunCloudEmoji from "./SunCloudEmoji";
 
 const CityDetails = () => {
   const { cityName } = useParams();
@@ -46,13 +51,35 @@ const CityDetails = () => {
         setWeather({ temp, code });
 
         if (code >= 60 && code <= 80) {
-          setMessage("☔ Porta un ombrello, potrebbe piovere!");
-        } else if (temp >= 29) {
-          setMessage("🧴 Fa caldo, bevi molta acqua!");
-        } else if (temp < 10) {
-          setMessage("🧣 Fa davvero freddo, copriti bene!");
-        } else {
-          setMessage("🔅 Giornata piacevole, goditela!");
+          setMessage(
+            <>
+              <UmbrellaEmoji /> Porta un ombrello, potrebbe piovere!
+            </>
+          );
+        } else if (temp >= 25) {
+          setMessage(
+            <>
+              <SweatEmoji /> Giornata perfetta per il mare!
+            </>
+          );
+        } else if (temp >= 15 && temp < 25) {
+          setMessage(
+            <>
+              <SunEmoji /> Giornata piacevole, perfetta per un picnic!
+            </>
+          );
+        } else if (temp >= 7 && temp < 15) {
+          setMessage(
+            <>
+              <SunCloudEmoji /> Clima fresco, ideale per una passeggiata!
+            </>
+          );
+        } else if (temp < 7) {
+          setMessage(
+            <>
+              <ScarfEmoji /> Fa davvero freddo, copriti bene!
+            </>
+          );
         }
       })
       .catch((err) => {
@@ -64,7 +91,6 @@ const CityDetails = () => {
 
   return (
     <div>
-      {" "}
       <h1>Happy Meteo!</h1>
       <div className="container">
         <Card className="shadow cardCd">
@@ -83,22 +109,20 @@ const CityDetails = () => {
                 placeholder="Inserisci la tua città"
                 className="formC2"
               />
-
               <Button className="btnCd" onClick={handleSearch}>
                 Vai!
               </Button>
             </Form>
-            <Card.Title className="titleC"> Meteo per: {cityName}</Card.Title>
+            <Card.Title className="titleC">Meteo per: {cityName}</Card.Title>
             {weather ? (
               <>
                 <Card.Text className="txc">
-                  Temperatura:{weather.temp}°C
+                  Temperatura: {weather.temp}°C
                 </Card.Text>
-                <Card.Text className="tcc"> {message}</Card.Text>
+                <Card.Text className="tcc">{message}</Card.Text>
               </>
             ) : (
               <Card.Text className="cs">
-                {" "}
                 {message || "Caricamento meteo"}
               </Card.Text>
             )}
@@ -106,7 +130,7 @@ const CityDetails = () => {
         </Card>
       </div>
       <div className="imm">
-        <img src={img} alt="sfondo" className="sImg"></img>
+        <img src={img} alt="sfondo" className="sImg" />
       </div>
     </div>
   );

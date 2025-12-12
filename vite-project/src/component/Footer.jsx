@@ -28,14 +28,12 @@ const Footer = () => {
           <strong>{new Date().toLocaleDateString("it-IT")}</strong>
         </p>
         <p>
-          © {new Date().getFullYear()} MeteoMagico · Pescara, Italia ·{" "}
+          © {new Date().getFullYear()} Happy Meteo · Pescara, Italia ·{" "}
           <a href="/privacy">Privacy</a> · <a href="/contatti">Contatti</a>
         </p>
       </div>
       <div className="footer-bottom">
-        <p>
-          Sviluppato con ❤️ da Alessandra · UI gioiosa, accessibile e regionale
-        </p>
+        <p>Sviluppato con ❤️ da Alessandra C.</p>
       </div>
     </footer>
   );
